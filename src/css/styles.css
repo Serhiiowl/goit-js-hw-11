@@ -5,8 +5,8 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import url('./loader.css');
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +22,150 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Стилі для форми пошуку */
+#searchForm {
+  display: flex;
+  justify-content: center;
+  /* Центрування форми по горизонталі */
+  margin-top: 20px;
+  /* Відступ зверху */
+}
+
+/* Стилі для галереї */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Стилі для елементів галереї */
+.gallery-item {
+  display: flex;
+  /* Використання flexbox для вирівнювання */
+  flex-direction: column;
+  /* Елементи в колонку */
+  align-items: center;
+  /* Вирівнювання елементів по центру */
+}
+
+/* Стилі для зображень */
+.gallery-item img {
+  flex-grow: 1;
+  /* Зображення займе всю доступну висоту, крім висоти підпису */
+  width: 100%;
+  /* Ширина зображення буде розтягнута на всю ширину картки */
+  object-fit: cover;
+  /* Зображення буде ображенням, обрізаючи його за необхідності */
+}
+
+/* Стилі для інформації під зображенням */
+.image-info {
+  text-align: center;
+  /* Текст вирівняний по центру */
+}
+
+.image-info .stats {
+  font-weight: bold;
+  /* Жирний шрифт для назв статистики */
+}
+
+.gallery-item {
+  border: 1px solid #808080;
+  /* Рамка навколо карточки */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  /* Легка тінь з низу та правої сторони */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  /* Плавний перехід для рамки та тіні */
+  overflow: hidden;
+  /* Запобігання виходу контенту за межі картки */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Забезпечує, що підпис буде внизу картки */
+  height: 100%;
+  /* Висота картки буде визначатися контейнером */
+
+}
+
+.gallery-item:hover {
+  border-color: #2E2F42;
+  /* Колір рамки під час ховеру */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  /* Збільшення тіні під час ховеру */
+}
+
+.image-info {
+  display: flex;
+  /* Використання flexbox для горизонтального розташування */
+  justify-content: space-between;
+  /* Рівномірний розподіл елементів у контейнері */
+  box-sizing: border-box;
+  height: 40px;
+  max-width: 100%;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  /* Максимальна ширина контейнера відповідає ширині картки */
+}
+
+.stats,
+.values {
+  font-family: 'Montserrat', sans-serif;
+  /* Встановлення шрифту Montserrat */
+  font-size: 12px;
+  /* Розмір шрифту 12px */
+}
+
+
+
+.image-info div {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 10px;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
+/* Стилі для поля пошуку */
+#searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#searchQuery {
+  width: 264px;
+  height: 32px;
+  border: 1px solid #808080;
+  padding: 0 10px;
+  color: #808080;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+#searchQuery:hover {
+  border-color: #000000;
+}
+
+#searchQuery:focus {
+  border-color: #4E75FF;
+  outline: none;
+}
+
+/* Стилі для кнопки пошуку */
+#searchForm input[type="submit"] {
+  width: 88px;
+  height: 32px;
+  background-color: #4E75FF;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#searchForm input[type="submit"]:hover {
+  background-color: #6C8CFF;
 }

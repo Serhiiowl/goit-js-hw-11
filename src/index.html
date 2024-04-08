@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Галерея зображень</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <form id="searchForm">
-    <input type="text" id="searchQuery" placeholder="Введіть запит для пошуку зображень">
-    <input type="submit" value="Пошук">
+    <input type="text" id="searchQuery" placeholder="Search images...">
+    <input type="submit" value="Search">
   </form>
 
-  <div id="loader" class="loader"></div>
+  <div id="loader" class="loader hidden">
+    <span class="loader"></span>
+  </div>
   <ul id="gallery" class="gallery"></ul>
 
   <!-- <script type="module" src="main.js"></script> -->
   <script type="module" src="./js/pixabay-api.js"></script>
   <script type="module" src="./js/render-functions.js"></script>
 </body>
+
 </html>
