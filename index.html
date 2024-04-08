@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Галерея зображень</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  
   <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8e8cd629.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8c59ed88.js">
   <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
+  <link rel="stylesheet" href="/goit-js-hw-11/assets/index-fd1221c5.css">
 </head>
+
 <body>
   <form id="searchForm">
-    <input type="text" id="searchQuery" placeholder="Введіть запит для пошуку зображень">
-    <input type="submit" value="Пошук">
+    <input type="text" id="searchQuery" placeholder="Search images...">
+    <input type="submit" value="Search">
   </form>
 
-  <div id="loader" class="loader"></div>
+  <div id="loader" class="loader hidden">
+    <span class="loader"></span>
+  </div>
   <ul id="gallery" class="gallery"></ul>
 
   <!-- <script type="module" src="main.js"></script> -->
   
   
 </body>
+
 </html>
